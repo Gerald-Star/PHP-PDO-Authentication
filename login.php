@@ -1,8 +1,14 @@
-<?php require 'includes/header.php'; ?>
+<?php 
+session_start();
+require 'includes/header.php';
 
-<?php require 'includes/navbar.php'; ?>
+require 'includes/navbar.php';
 
-<?php require 'config.php'; ?>
+require 'config.php'; 
+ 
+?>
+
+
 
 <main class="bg-light">
 
@@ -41,7 +47,8 @@
                 <form action="login_process.php" method="POST">
                   <div class="mb-3">
                     <label for="loginEmail" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
+                    <input name="email" type="email" class="form-control" id="loginEmail" placeholder="Enter your email"
+                      required>
                   </div>
 
                   <div class="mb-3">
